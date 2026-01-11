@@ -1,0 +1,41 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c1810;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #F5F5DC;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: serif;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #8B0000;
+  color: #F5F5DC;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #A52A2A;
+}

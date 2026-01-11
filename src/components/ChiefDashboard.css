@@ -1,0 +1,38 @@
+.chief-dashboard {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c1810;
+  color: #F5F5DC;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-family: serif;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 30px;
+  background-color: #1a0f0a;
+  padding: 20px;
+  border: 2px solid #8B0000;
+}
+
+button {
+  background-color: #8B0000;
+  color: #F5F5DC;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #A52A2A;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

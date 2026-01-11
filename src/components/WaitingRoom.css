@@ -1,0 +1,42 @@
+.waiting-room {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a0f0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #F5F5DC;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: serif;
+  margin-bottom: 20px;
+}
+
+.loading {
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #8B0000;
+  border-top: 5px solid #FFD700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #8B0000;
+  color: #F5F5DC;
+  border: none;
+  cursor: pointer;
+}
