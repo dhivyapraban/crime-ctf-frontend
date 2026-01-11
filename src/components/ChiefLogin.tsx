@@ -27,6 +27,7 @@ const ChiefLogin: React.FC = () => {
               'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json',
             },
+            credentials: 'include',
           });
           
           if (response.ok) {
