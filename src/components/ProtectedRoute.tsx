@@ -39,7 +39,6 @@ const ProtectedRoute = ({ children, redirectTo, requiredRole }: ProtectedRoutePr
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-          credentials: 'include',
         });
 
         if (response.ok) {

@@ -13,7 +13,6 @@ export const casesAPI = {
   getAll: async () => {
     const response = await fetch(`${API_BASE_URL}/cases`, {
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to fetch cases');
     return response.json();
@@ -23,7 +22,6 @@ export const casesAPI = {
     const response = await fetch(`${API_BASE_URL}/cases`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify(caseData),
     });
     if (!response.ok) throw new Error('Failed to add case');
@@ -34,7 +32,6 @@ export const casesAPI = {
     const response = await fetch(`${API_BASE_URL}/cases/${id}`, {
       method: 'PUT',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify(caseData),
     });
     if (!response.ok) throw new Error('Failed to update case');
@@ -45,7 +42,6 @@ export const casesAPI = {
     const response = await fetch(`${API_BASE_URL}/cases/${id}`, {
       method: 'DELETE',
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to delete case');
     return response.json();
@@ -55,7 +51,6 @@ export const casesAPI = {
     const response = await fetch(`${API_BASE_URL}/cases/${caseId}/hints/${hintId}/release`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to release hint');
     return response.json();
@@ -67,7 +62,6 @@ export const gameAPI = {
   getState: async () => {
     const response = await fetch(`${API_BASE_URL}/game`, {
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to fetch game state');
     return response.json();
@@ -77,7 +71,6 @@ export const gameAPI = {
     const response = await fetch(`${API_BASE_URL}/game`, {
       method: 'PUT',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify(stateData),
     });
     if (!response.ok) throw new Error('Failed to update game state');
@@ -88,7 +81,6 @@ export const gameAPI = {
     const response = await fetch(`${API_BASE_URL}/game/start`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify({ timerSeconds }),
     });
     if (!response.ok) throw new Error('Failed to start contest');
@@ -99,7 +91,6 @@ export const gameAPI = {
     const response = await fetch(`${API_BASE_URL}/game/stop`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to stop contest');
     return response.json();
@@ -111,7 +102,6 @@ export const leaderboardAPI = {
   get: async () => {
     const response = await fetch(`${API_BASE_URL}/leaderboard`, {
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to fetch leaderboard');
     return response.json();
@@ -120,7 +110,6 @@ export const leaderboardAPI = {
   getMyScore: async () => {
     const response = await fetch(`${API_BASE_URL}/leaderboard/my-score`, {
       headers: getAuthHeaders(),
-      credentials: 'include',
     });
     if (!response.ok) throw new Error('Failed to fetch score');
     return response.json();
@@ -130,7 +119,6 @@ export const leaderboardAPI = {
     const response = await fetch(`${API_BASE_URL}/leaderboard/submit`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify({ caseId, flag }),
     });
     const data = await response.json();
@@ -144,7 +132,6 @@ export const leaderboardAPI = {
     const response = await fetch(`${API_BASE_URL}/leaderboard/use-hint`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      credentials: 'include',
       body: JSON.stringify({ caseId, hintId }),
     });
     if (!response.ok) {

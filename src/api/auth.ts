@@ -21,7 +21,6 @@ export const detectiveAPI = {
       headers: {
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
       body: JSON.stringify({ username, password }),
     });
 
@@ -40,7 +39,6 @@ export const detectiveAPI = {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
     });
 
     if (!response.ok) {
@@ -62,7 +60,6 @@ export const detectiveAPI = {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-          credentials: 'include',
         });
       } catch (error) {
         // Continue with client-side logout even if server request fails
@@ -90,7 +87,6 @@ export const chiefAPI = {
       headers: {
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
       body: JSON.stringify({ username, password }),
     });
 
@@ -109,7 +105,6 @@ export const chiefAPI = {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
     });
 
     if (!response.ok) {
@@ -131,7 +126,6 @@ export const chiefAPI = {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
-          credentials: 'include',
         });
       } catch (error) {
         // Continue with client-side logout even if server request fails
