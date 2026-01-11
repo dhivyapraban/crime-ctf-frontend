@@ -535,7 +535,7 @@ const ChiefDashboard: React.FC = () => {
                         )}
                       </div>
                       <button
-                        onClick={() => handleRemoveCase(caseItem.id)}
+                        onClick={() => handleRemoveCase((caseItem as any)._id || caseItem.id)}
                         className="bg-red-600 text-white font-serif font-bold px-4 py-2 hover:bg-red-700 transition-all duration-300 active:scale-95 ml-4"
                       >
                         REMOVE
